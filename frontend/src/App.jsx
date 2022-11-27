@@ -1,9 +1,14 @@
 import "./App.css";
+import Navbar from "./components/Navbar/NavBar";
+import Home from "./components/firstcontainer/Home";
+import Second from "./components/Onglets/Second";
 
 function App() {
   return (
-    <div className="">
-      <p className="bg-red-600">coucou</p>
+    <div className="w-screen">
+      <Navbar />
+      <Home />
+      <Second />
     </div>
   );
 }
