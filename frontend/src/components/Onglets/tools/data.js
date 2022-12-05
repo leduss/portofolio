@@ -44,14 +44,14 @@ const data = [
   },
   {
     id: 6,
-    svg: express,
-    name_language: "EXPRESS",
+    svg: node,
+    name_language: "NODE JS",
     id_style: 3,
   },
   {
     id: 7,
-    svg: node,
-    name_language: "NODE JS",
+    svg: express,
+    name_language: "EXPRESS",
     id_style: 3,
   },
   {
@@ -63,7 +63,7 @@ const data = [
   {
     id: 9,
     svg: vscode,
-    name_language: "VISUAL STUDIO CODE",
+    name_language: "VS CODE",
     id_style: 4,
   },
   {

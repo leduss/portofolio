@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import style from "./tools/style";
+import data from "./tools/data";
+import Datas from "./Datas";
 
 function Onglets() {
   const [toggleState, setToggleState] = useState(1);
@@ -7,117 +10,50 @@ function Onglets() {
     setToggleState(index);
   };
   return (
-    <div className="flex-col w-4/5 border border-white m-auto break-all rounded-xl">
-      <div className="flex">
+    <div className="flex-col w-10/12 m-auto break-all rounded-b-xl ">
+      <div className="flex gap-6 items-end">
         <button
           className={
             toggleState === 1
-              ? "p-4 text-center w-6/12 bg-zinc-700 border-b-2 border-transparent  text-white underline decoration-green-400 box-content relative outline-none rounded-tl-xl"
-              : "p-4 text-center w-6/12 bg-zinc-800 border-b-2 border-green-400 text-white box-content relative outline-none rounded-tl-xl"
+              ? "p-4 text-center w-52 bg-zinc-800 text-white box-content relative rounded-t-xl border-t-2 border-green-500 scale-100"
+              : "p-4 text-center w-52 h-3 text-sm bg-zinc-900 border-b-2 border-green-500 text-white box-content relative outline-none rounded-t-xl"
           }
           type="button"
           onClick={() => toggleTab(1)}
         >
-          1
+          MA FORMATION
         </button>
-        <button
-          className={
-            toggleState === 2
-              ? "p-4 text-center w-6/12 bg-zinc-700 border-b-2 border-transparent text-white underline decoration-green-400 box-content relative outline-none"
-              : "p-4 text-center w-6/12 bg-zinc-800 border-b-2 border-green-400 text-white box-content relative"
-          }
-          type="button"
-          onClick={() => toggleTab(2)}
-        >
-          2
-        </button>
-        <button
-          className={
-            toggleState === 3
-              ? "p-4 text-center w-6/12 bg-zinc-700 border-b-2 border-transparent text-white underline decoration-green-400 box-content relative outline-none"
-              : "p-4 text-center w-6/12 bg-zinc-800 border-b-2 border-green-400 text-white box-content relative"
-          }
-          type="button"
-          onClick={() => toggleTab(3)}
-        >
-          3
-        </button>
-        <button
-          className={
-            toggleState === 4
-              ? "p-4 text-center w-6/12 bg-zinc-700 border-b-2 border-transparent text-white underline decoration-green-400 box-content relative outline-none rounded-tr-xl"
-              : "p-4 text-center w-6/12 bg-zinc-800 border-b-2 border-green-400 text-white box-content relative rounded-tr-xl"
-          }
-          type="button"
-          onClick={() => toggleTab(4)}
-        >
-          4
-        </button>
+        {style.map((styles) => (
+          <button
+            className={
+              toggleState === styles.id
+                ? "p-4 text-center w-52 bg-zinc-800 text-white box-content relative rounded-t-xl border-t-2 border-green-500"
+                : "p-4 text-center w-52 h-3 text-sm bg-zinc-900 border-b-2 border-green-500 text-white box-content relative  rounded-t-xl "
+            }
+            type="button"
+            onClick={() => toggleTab(styles.id)}
+          >
+            {styles.name_style}
+          </button>
+        ))}
       </div>
 
       <div className="grow">
-        <div
-          className={
-            toggleState === 1
-              ? "bg-zinc-700 p-6 w-full h-40 block rounded-b-xl"
-              : "p-6 w-full h-full hidden"
-          }
-        >
-          <h2> 1</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
-            vel voluptatum?
-          </p>
-        </div>
+        <div className="bg-zinc-800 p-6 w-full h-56 rounded-b-xl flex gap-24 justify-center items-center">
+          <div className={toggleState === 1 ? "text-white" : "hidden"}>
+            <h2>kjnbkj</h2>
+            <h2>kjnbkj</h2>
+            <h2>kjnbkj</h2>
+          </div>
 
-        <div
-          className={
-            toggleState === 2
-              ? "bg-zinc-700 p-6 w-full h-40 block rounded-b-xl"
-              : "bg-orange-400 p-6 w-full h-full hidden"
-          }
-        >
-          <h2> 2</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            voluptatum qui adipisci.
-          </p>
-        </div>
-
-        <div
-          className={
-            toggleState === 3
-              ? "bg-zinc-700 p-6 w-full h-40 block rounded-b-xl"
-              : "bg-orange-400 p-6 w-full h-full hidden"
-          }
-        >
-          <h2> 3</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
-            nostrum rerum laudantium totam unde adipisci incidunt modi alias!
-            Accusamus in quia odit aspernatur provident et ad vel distinctio
-            recusandae totam quidem repudiandae omnis veritatis nostrum
-            laboriosam architecto optio rem, dignissimos voluptatum beatae
-            aperiam voluptatem atque. Beatae rerum dolores sunt.
-          </p>
-        </div>
-        <div
-          className={
-            toggleState === 4
-              ? "bg-zinc-700 p-6 w-full h-40 block rounded-b-xl"
-              : "bg-orange-400 p-6 w-full h-full hidden"
-          }
-        >
-          <h2> 3</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
-            nostrum rerum laudantium totam unde adipisci incidunt modi alias!
-            Accusamus in quia odit aspernatur provident et ad vel distinctio
-            recusandae totam quidem repudiandae omnis veritatis nostrum
-            laboriosam architecto optio rem, dignissimos voluptatum beatae
-            aperiam voluptatem atque. Beatae rerum dolores sunt.
-          </p>
+          {data.map((datas) => (
+            <div
+              className={toggleState === datas.id_style ? "" : "hidden"}
+              key={datas.id}
+            >
+              <Datas datas={datas} />
+            </div>
+          ))}
         </div>
       </div>
     </div>

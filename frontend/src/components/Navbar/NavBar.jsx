@@ -14,7 +14,7 @@ function Navbar() {
       }}
       initial={{ x: 0, y: -200, scale: 0, opacity: 0 }}
       animate={{ x: 0, y: 0, scale: 1, opacity: 1 }}
-      className="fixed right-0 flex gap-20 mt-3 mr-8"
+      className="fixed right-0 flex gap-20 mt-3 mr-8 z-50"
     >
       {navigation.map((navlink) => (
         <motion.li

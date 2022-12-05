@@ -8,7 +8,7 @@ function Name() {
         initial={{ x: -200, y: -200, scale: 0, opacity: 0 }}
         animate={{ x: 0, y: 0, scale: 1, opacity: 1 }}
         transition={{ duration: 2 }}
-        className="text-white text-8xl shadow-md"
+        className="text-white text-8xl"
       >
         Julien
       </motion.h1>
