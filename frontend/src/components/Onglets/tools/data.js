@@ -10,6 +10,7 @@ import vscode from "./assets/visual-studio-code-1.svg";
 import github from "./assets/github-icon.svg";
 import git from "./assets/git-icon.svg";
 import figma from "./assets/figma-1.svg";
+import webstorm from "./assets/webstorm-icon.svg";
 
 const data = [
   {
@@ -79,9 +80,15 @@ const data = [
     id_style: 4,
   },
   {
-    id: 1,
+    id: 12,
     svg: figma,
     name_language: "FIGMA",
+    id_style: 4,
+  },
+  {
+    id: 13,
+    svg: webstorm,
+    name_language: "WEBSTORM",
     id_style: 4,
   },
 ];

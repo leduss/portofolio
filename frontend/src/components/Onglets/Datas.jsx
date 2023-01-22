@@ -1,24 +1,19 @@
 import React from "react";
 import { PropTypes } from "prop-types";
-import { motion } from "framer-motion";
 
 function Datas({ datas }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.3 }}
-      transition={{ duration: 1 }}
-      className="flex-col"
-    >
-      <img className="w-28 h-28 flex m-auto" src={datas.svg} alt="" />
+    <div className="flex-col">
+      <img className="w-24 h-24 flex m-auto" src={datas.svg} alt="" />
       <h4 className="text-white text-6l flex justify-center mt-6">
         {datas.name_language}
       </h4>
-    </motion.div>
+    </div>
   );
 }
 
 Datas.propTypes = {
-  datas: PropTypes.string.isRequired,
+  datas: PropTypes.objectOf.isRequired,
 };
 
 export default Datas;

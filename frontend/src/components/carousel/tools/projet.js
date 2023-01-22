@@ -29,7 +29,7 @@ const projet = [
     name: "Wild Festival",
     theme: "Une application permettant de réserver un festival.",
     img: imgWF1,
-    lien: false,
+    lien: "",
     techno: {
       src1: html,
       src2: css,

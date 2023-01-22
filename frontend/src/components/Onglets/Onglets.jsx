@@ -10,7 +10,7 @@ function Onglets() {
     setToggleState(index);
   };
   return (
-    <div className="flex-col w-10/12 m-auto break-all rounded-b-xl ">
+    <div className="w-8/12 rounded-b-xl ">
       <div className="flex gap-6 items-end">
         <button
           className={
@@ -32,6 +32,7 @@ function Onglets() {
             }
             type="button"
             onClick={() => toggleTab(styles.id)}
+            key={styles.id}
           >
             {styles.name_style}
           </button>
