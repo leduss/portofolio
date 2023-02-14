@@ -2,17 +2,17 @@ const navigation = [
   {
     id: 1,
     nameNavigation: "Home",
-    ju: "handleClick1",
+    ju: "home",
   },
   {
     id: 2,
     nameNavigation: "Mes projets",
-    ju: "handleClick2",
+    ju: "about",
   },
   {
     id: 3,
     nameNavigation: "Contact",
-    ju: "handleClick3",
+    ju: "project",
   },
 ];
 
