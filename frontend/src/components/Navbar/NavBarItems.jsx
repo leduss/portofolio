@@ -2,23 +2,23 @@ import React from "react";
 import { PropTypes } from "prop-types";
 import { HashLink as Link } from "react-router-hash-link";
 
-function Nav({ nav }) {
+function NavBarItems({ nav }) {
   return (
     <div className="nav">
-      <Link smooth to={`#${nav.ju}`}>
+      <Link smooth to={`#${nav.link}`}>
         <p
-          className="text-white hover:underline decoration-green-400 text-xl"
+          className="text-white hover:underline decoration-green-400 text-xl max-md:text-4xl"
           role="presentation"
         >
-          {nav.nameNavigation}
+          {nav.title}
         </p>
       </Link>
     </div>
   );
 }
 
-Nav.propTypes = {
+NavBarItems.propTypes = {
   nav: PropTypes.objectOf.isRequired,
 };
 
-export default Nav;
+export default NavBarItems;

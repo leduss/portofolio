@@ -1,18 +1,23 @@
 const navigation = [
   {
     id: 1,
-    nameNavigation: "Home",
-    ju: "home",
+    title: "Accueil",
+    link: "home",
   },
   {
     id: 2,
-    nameNavigation: "Mes projets",
-    ju: "about",
+    title: "A propos",
+    link: "about",
   },
   {
     id: 3,
-    nameNavigation: "Contact",
-    ju: "project",
+    title: "Mes projets",
+    link: "project",
+  },
+  {
+    id: 4,
+    title: "Contact",
+    link: "contact",
   },
 ];
 
