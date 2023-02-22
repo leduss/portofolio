@@ -48,6 +48,19 @@ export default function Carousel() {
   }
   const goToSlide = (slideIndex) => {
     setCurrent(slideIndex);
+    const tl = gsap.timeline();
+    tl.to("#bla", {
+      opacity: 0,
+      duration: 0,
+      delay: 0,
+    });
+    setTimeout(() => {
+      tl.fromTo(
+        "#bla",
+        { opacity: 0, duration: 1, delay: 0, x: "-20vw" },
+        { opacity: 1, duration: 1, delay: 0, x: "0vw" }
+      );
+    }, 100);
   };
   return (
     <div className="flex flex-col justify-center items-center w-screen h-screen">
@@ -66,7 +79,7 @@ export default function Carousel() {
                   setCurrent={setCurrent}
                   goToSlide={goToSlide}
                   autoPlay
-                  autoPlaySpeed={6000}
+                  autoPlaySpeed={10000}
                 />
               </div>
               <div className="w-[40%] h-full flex flex-col justify-center max-lg:w-[100%] ">
@@ -84,7 +97,7 @@ export default function Carousel() {
                     Lien
                   </a>
                 )}
-                <div className="flex flex-wrap w-[60%] items-center gap-10 pt-8 ">
+                <div className="flex flex-wrap w-[60%] max-sm:w-[100%] items-center gap-10 pt-8 ">
                   <img
                     className="w-16 h-16 max-lg:w-10 max-sm:h-10"
                     src={el.techno.src1}

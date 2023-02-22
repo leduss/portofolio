@@ -15,8 +15,19 @@ function CarouselItems({
     const index = isLastSlide ? 0 : current + 1;
     setCurrent(index);
     if (el.img.length !== 1) {
-      gsap.from("#bla", { opacity: 0, duration: 1 });
-      gsap.to("#bla", { opacity: 1, duration: 2 });
+      const tl = gsap.timeline();
+      tl.to("#bla", {
+        opacity: 0,
+        duration: 0,
+        delay: 0,
+      });
+      setTimeout(() => {
+        tl.fromTo(
+          "#bla",
+          { opacity: 0, duration: 1, delay: 0, x: "-20vw" },
+          { opacity: 1, duration: 1, delay: 0, x: "0vw" }
+        );
+      }, 100);
     }
   };
   useEffect(() => {
@@ -36,7 +47,7 @@ function CarouselItems({
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
             role="presentation"
-            className={`transition-all w-3 h-3 bg-white rounded-full ${
+            className={`transition w-3 h-3 bg-white rounded-full relative duration-500 cursor-pointer ${
               current === slideIndex ? "p-2" : "bg-opacity-50"
             }`}
           >
@@ -49,19 +60,16 @@ function CarouselItems({
 }
 CarouselItems.propTypes = {
   el: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    theme: PropTypes.string.isRequired,
+    id: PropTypes.number,
     img: PropTypes.arrayOf(
       PropTypes.shape({
-        src: PropTypes.string.isRequired,
+        src: PropTypes.string,
       })
-    ).isRequired,
+    ),
   }).isRequired,
   current: PropTypes.number.isRequired,
-  goToSlide: PropTypes.func.isRequired,
   setCurrent: PropTypes.func.isRequired,
+  goToSlide: PropTypes.func.isRequired,
   autoPlaySpeed: PropTypes.number.isRequired,
   autoPlay: PropTypes.bool.isRequired,
 };
