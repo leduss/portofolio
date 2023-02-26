@@ -1,14 +1,14 @@
 const style = [
   {
-    id: 2,
+    id: 1,
     name_style: "FRONT END",
   },
   {
-    id: 3,
+    id: 2,
     name_style: "BACK END",
   },
   {
-    id: 4,
+    id: 3,
     name_style: "TOOLS",
   },
 ];

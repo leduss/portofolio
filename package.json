@@ -1,5 +1,6 @@
 {
-  "name": "template-fullstack",
+  "name": "portfolio",
+  "homepage": "https://juliendussart.fr",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

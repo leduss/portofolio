@@ -21,9 +21,7 @@ export default function Carousel() {
         { opacity: 0, duration: 1, delay: 0, x: "50vw" },
         { opacity: 1, duration: 1, delay: 0, x: "0vw" }
       );
-      const isLastSlide = isActive === projet.length;
-      const index = isLastSlide ? 1 : isActive + 1;
-      setIsActive(index);
+      setIsActive(isActive === projet.length ? 1 : isActive + 1);
     }, 600);
     setCurrent(0);
   }
@@ -40,9 +38,7 @@ export default function Carousel() {
         { opacity: 0, duration: 1, delay: 0, x: "-50vw" },
         { opacity: 1, duration: 1, delay: 0, x: "0vw" }
       );
-      const isFirstSlide = isActive === 1;
-      const index = isFirstSlide ? projet.length : isActive - 1;
-      setIsActive(index);
+      setIsActive(isActive === 1 ? projet.length : isActive - 1);
     }, 600);
     setCurrent(0);
   }
@@ -98,36 +94,14 @@ export default function Carousel() {
                   </a>
                 )}
                 <div className="flex flex-wrap w-[60%] max-sm:w-[100%] items-center gap-10 pt-8 ">
-                  <img
-                    className="w-16 h-16 max-lg:w-10 max-sm:h-10"
-                    src={el.techno.src1}
-                    alt="logo techno"
-                  />
-                  <img
-                    className="w-16 h-16 max-lg:w-10 max-sm:h-10"
-                    src={el.techno.src2}
-                    alt="logo techno"
-                  />
-                  <img
-                    className="w-16 h-16 max-lg:w-10 max-sm:h-10 "
-                    src={el.techno.src3}
-                    alt="logo techno"
-                  />
-                  <img
-                    className="w-16 h-16 max-lg:w-10 max-sm:h-10"
-                    src={el.techno.src4 || ""}
-                    alt="logo techno"
-                  />
-                  <img
-                    className="w-16 h-16 max-lg:w-10 max-sm:h-10"
-                    src={el.techno.src5 || ""}
-                    alt="logo techno"
-                  />
-                  <img
-                    className="w-16 h-16 max-lg:w-10 max-sm:h-10"
-                    src={el.techno.src6 || ""}
-                    alt="logo techno"
-                  />
+                  {el.techno.map((element) => (
+                    <img
+                      className="w-16 h-16 max-lg:w-10 max-sm:h-10"
+                      src={element.src}
+                      alt="logo techno"
+                      key={element.id}
+                    />
+                  ))}
                 </div>
               </div>
             </div>

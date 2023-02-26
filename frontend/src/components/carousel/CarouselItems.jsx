@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { PropTypes } from "prop-types";
-import gsap from "gsap";
 
 function CarouselItems({
   el,
@@ -11,24 +10,7 @@ function CarouselItems({
   autoPlay,
 }) {
   const goToSlideNext = () => {
-    const isLastSlide = current === el.img.length - 1;
-    const index = isLastSlide ? 0 : current + 1;
-    setCurrent(index);
-    if (el.img.length !== 1) {
-      const tl = gsap.timeline();
-      tl.to("#bla", {
-        opacity: 0,
-        duration: 0,
-        delay: 0,
-      });
-      setTimeout(() => {
-        tl.fromTo(
-          "#bla",
-          { opacity: 0, duration: 1, delay: 0, x: "-20vw" },
-          { opacity: 1, duration: 1, delay: 0, x: "0vw" }
-        );
-      }, 100);
-    }
+    setCurrent(current === el.img.length - 1 ? 0 : current + 1);
   };
   useEffect(() => {
     let interval = null;
@@ -38,21 +20,28 @@ function CarouselItems({
     return () => clearInterval(interval);
   }, [current, autoPlay, autoPlaySpeed]);
   return (
-    <div className="w-full h-full flex flex-col gap-3 justify-center items-center max-lg:w-[100%] max-lg:h-[60%]">
-      <img src={el.img[current].src} alt="" className="rounded-xl" id="bla" />
-      <div className="flex items-center justify-center gap-3">
+    <div className="flex flex-col gap-4 overflow-hidden relative">
+      <div
+        className="flex transition-transform ease-out duration-1000"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
+        {el.img.map((element) => (
+          <img src={element.src} alt="" className="rounded-xl" />
+        ))}
+      </div>
+      <div className="flex items-end justify-center gap-3">
         {el.img.map((slide, slideIndex) => (
           <div
             /* eslint-disable-next-line react/no-array-index-key */
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
             role="presentation"
-            className={`transition w-3 h-3 bg-white rounded-full relative duration-500 cursor-pointer ${
-              current === slideIndex ? "p-2" : "bg-opacity-50"
+            className={`w-5 h-2 rounded-full relative duration-1000 cursor-pointer ${
+              current === slideIndex
+                ? "py-1.5 px-7 transition-all duration-1000 bg-green-500"
+                : "bg-green-500/75 transition-all duration-1000"
             }`}
-          >
-            .
-          </div>
+          />
         ))}
       </div>
     </div>

@@ -1,21 +1,43 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { MdOutlineMenu } from "react-icons/all";
 import SmallNavBar from "@components/Navbar/SmallNavBar";
 import gsap from "gsap";
+import { Squash as Hamburger } from "hamburger-react";
 import navigation from "./navigation";
 import NavBarItems from "./NavBarItems";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
-    gsap.to("#nav", { duration: 1, opacity: 1 });
+    const tl = gsap.timeline();
+    tl.to("#nav", {
+      opacity: 0,
+      duration: 0,
+      delay: 0,
+    });
+    setTimeout(() => {
+      tl.fromTo(
+        "#nav",
+        { opacity: 0, duration: 1, delay: 0, y: "-100vh" },
+        { opacity: 1, duration: 1, delay: 0, y: "0vh" }
+      );
+    }, 100);
     setIsOpen(!isOpen);
   };
   return (
     <div className="fixed w-full flex justify-end items-center z-50">
-      <div className="text-white absolute left-2 top-4 md:hidden">
-        <MdOutlineMenu onClick={toggle} size="3em" />
+      <div
+        className="text-white md:hidden w-32 h-32 z-50 cursor-pointer absolute left-4 top-4"
+        onClick={toggle}
+        role="presentation"
+      >
+        <Hamburger
+          toggled={isOpen}
+          toggle={setIsOpen}
+          size={40}
+          duration={0.8}
+          rounded
+        />
       </div>
       <motion.ul
         transition={{

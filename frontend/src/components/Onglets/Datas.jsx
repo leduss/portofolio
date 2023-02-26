@@ -3,11 +3,12 @@ import { PropTypes } from "prop-types";
 
 function Datas({ datas }) {
   return (
-    <div className="">
+    <div className="" id="blabla">
       <img
         className="w-24 h-24 flex m-auto max-lg:w-16 max-lg:h-16"
         src={datas.svg}
         alt=""
+        id="blabla"
       />
       <h4 className="text-white text-6l max-lg:text-sm flex justify-center mt-6 max-lg:mt-2">
         {datas.name_language}

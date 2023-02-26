@@ -1,4 +1,5 @@
 import "./App.css";
+import Contact from "@components/Contact/Contact";
 import Navbar from "./components/Navbar/NavBar";
 import Home from "./components/firstcontainer/Home";
 import Second from "./components/Onglets/Second";
@@ -11,6 +12,7 @@ function App() {
       <Home />
       <Second />
       <Thirty />
+      <Contact />
     </div>
   );
 }

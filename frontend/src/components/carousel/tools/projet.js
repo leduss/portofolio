@@ -43,14 +43,21 @@ const projet = [
         src: img2BQ,
       },
     ],
-    imgsup: img2BQ,
     lien: "https://alexandrepre.github.io/bordeuxquizz/",
-    techno: {
-      src1: html,
-      src2: css,
-      src3: js,
-      src4: false,
-    },
+    techno: [
+      {
+        id: 1,
+        src: html,
+      },
+      {
+        id: 2,
+        src: css,
+      },
+      {
+        id: 3,
+        src: js,
+      },
+    ],
   },
   {
     id: 2,
@@ -65,12 +72,24 @@ const projet = [
       },
     ],
     lien: "",
-    techno: {
-      src1: html,
-      src2: css,
-      src3: js,
-      src4: react,
-    },
+    techno: [
+      {
+        id: 1,
+        src: html,
+      },
+      {
+        id: 2,
+        src: css,
+      },
+      {
+        id: 3,
+        src: js,
+      },
+      {
+        id: 4,
+        src: react,
+      },
+    ],
   },
   {
     id: 3,
@@ -89,12 +108,24 @@ const projet = [
       },
     ],
     lien: "https://dazzling-toffee-ce31cf.netlify.app/",
-    techno: {
-      src1: html,
-      src2: css,
-      src3: js,
-      src4: react,
-    },
+    techno: [
+      {
+        id: 1,
+        src: html,
+      },
+      {
+        id: 2,
+        src: css,
+      },
+      {
+        id: 3,
+        src: js,
+      },
+      {
+        id: 4,
+        src: react,
+      },
+    ],
   },
   {
     id: 4,
@@ -125,13 +156,28 @@ const projet = [
       },
     ],
     lien: "",
-    techno: {
-      src1: html,
-      src2: css,
-      src3: js,
-      src4: react,
-      src5: mysql,
-    },
+    techno: [
+      {
+        id: 1,
+        src: react,
+      },
+      {
+        id: 2,
+        src: tailwind,
+      },
+      {
+        id: 3,
+        src: node,
+      },
+      {
+        id: 4,
+        src: express,
+      },
+      {
+        id: 5,
+        src: mysql,
+      },
+    ],
   },
   {
     id: 5,
@@ -146,13 +192,28 @@ const projet = [
       },
     ],
     lien: "",
-    techno: {
-      src1: react,
-      src2: tailwind,
-      src3: node,
-      src4: express,
-      src5: mysql,
-    },
+    techno: [
+      {
+        id: 1,
+        src: react,
+      },
+      {
+        id: 2,
+        src: tailwind,
+      },
+      {
+        id: 3,
+        src: node,
+      },
+      {
+        id: 4,
+        src: express,
+      },
+      {
+        id: 5,
+        src: mysql,
+      },
+    ],
   },
   {
     id: 6,
@@ -175,14 +236,32 @@ const projet = [
       },
     ],
     lien: "",
-    techno: {
-      src1: react,
-      src2: tailwind,
-      src3: redux,
-      src4: node,
-      src5: express,
-      src6: mysql,
-    },
+    techno: [
+      {
+        id: 1,
+        src: react,
+      },
+      {
+        id: 2,
+        src: tailwind,
+      },
+      {
+        id: 3,
+        src: redux,
+      },
+      {
+        id: 4,
+        src: node,
+      },
+      {
+        id: 5,
+        src: express,
+      },
+      {
+        id: 6,
+        src: mysql,
+      },
+    ],
   },
 ];
 
