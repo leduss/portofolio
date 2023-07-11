@@ -5,12 +5,12 @@ function Datas({ datas }) {
   return (
     <div className="" id="blabla">
       <img
-        className="w-24 h-24 flex m-auto max-lg:w-16 max-lg:h-16"
+        className="w-20 h-20 flex m-auto max-sm:w-12 max-sm:h-12"
         src={datas.svg}
         alt=""
         id="blabla"
       />
-      <h4 className="text-white text-6l max-lg:text-sm flex justify-center mt-6 max-lg:mt-2">
+      <h4 className="text-white text-lg max-sm:text-[12px] flex justify-center mt-2 max-lg:mt-2">
         {datas.name_language}
       </h4>
     </div>

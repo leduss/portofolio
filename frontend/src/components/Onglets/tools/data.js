@@ -11,6 +11,11 @@ import github from "./assets/github-icon.svg";
 import git from "./assets/git-icon.svg";
 import figma from "./assets/figma-1.svg";
 import webstorm from "./assets/webstorm-icon.svg";
+import angular from "./assets/angular-icon.svg";
+import typescript from "./assets/typescriptlang-icon.svg";
+import java from "./assets/jee-3.svg";
+import spring from "./assets/spring-3.svg";
+import intellij from "./assets/intellij-idea-1.svg";
 
 const data = [
   {
@@ -38,6 +43,18 @@ const data = [
     id_style: 1,
   },
   {
+    id: 14,
+    svg: angular,
+    name_language: "ANGULAR",
+    id_style: 1,
+  },
+  {
+    id: 15,
+    svg: typescript,
+    name_language: "TYPESCRIPT",
+    id_style: 1,
+  },
+  {
     id: 5,
     svg: tailwind,
     name_language: "TAILWIND",
@@ -53,6 +70,18 @@ const data = [
     id: 7,
     svg: express,
     name_language: "EXPRESS",
+    id_style: 2,
+  },
+  {
+    id: 16,
+    svg: java,
+    name_language: "JAVA",
+    id_style: 2,
+  },
+  {
+    id: 17,
+    svg: spring,
+    name_language: "SPRING",
     id_style: 2,
   },
   {
@@ -89,6 +118,12 @@ const data = [
     id: 13,
     svg: webstorm,
     name_language: "WEBSTORM",
+    id_style: 3,
+  },
+  {
+    id: 18,
+    svg: intellij,
+    name_language: "INTELLIJ",
     id_style: 3,
   },
 ];

@@ -7,6 +7,8 @@ import css from "./assets/css-3.svg";
 import js from "./assets/javascript-1.svg";
 import react from "./assets/react-2.svg";
 import tailwind from "./assets/tailwind-css-2.svg";
+import next from "./assets/nextjs-2.svg";
+import query from "./assets/react-query-seeklogo.com.svg";
 import express from "./assets/express-109.svg";
 import node from "./assets/nodejs-icon.svg";
 import heure from "./assets/heure.png";
@@ -22,6 +24,9 @@ import mysql from "./assets/mysql-6.svg";
 import check1 from "./assets/check1.png";
 import check2 from "./assets/check2.png";
 import check3 from "./assets/check3.png";
+import pok1 from "./assets/Capture d’écran 2023-03-04 à 12.15.12.png";
+import pok2 from "./assets/Capture d’écran 2023-03-04 à 12.15.02.png";
+import chaban from "./assets/Capture d’écran 2023-03-06 à 18.03.12.png";
 
 const projet = [
   {
@@ -260,6 +265,66 @@ const projet = [
       {
         id: 6,
         src: mysql,
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Projet perso",
+    name: "Pokedex",
+    theme:
+      "Ce projet m'a permis de découvrir NEXT JS, REACT QUERY. J'ai apprécié travailler sur ce projet et j'espère que vous apprécierez le résultat. Le site web Pokédex que j'ai créé affiche une liste complète de tous les Pokémons, et permet aux utilisateurs de rechercher des Pokémons.",
+    img: [
+      {
+        id: 1,
+        src: pok1,
+      },
+      {
+        id: 2,
+        src: pok2,
+      },
+    ],
+    lien: "https://pokedexdejulien.website/",
+    techno: [
+      {
+        id: 1,
+        src: next,
+      },
+      {
+        id: 2,
+        src: query,
+      },
+      {
+        id: 3,
+        src: tailwind,
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "Projet perso",
+    name: "Fermeture du pont Chaban Delmas",
+    theme:
+      "L'application est conçue pour informer les utilisateurs des dates de fermeture du pont Chaban Delmas à Bordeaux. Un chronomètre en temps réel est également affiché, permettant à l'utilisateur de savoir combien de temps il lui reste avant la fermeture.",
+    img: [
+      {
+        id: 1,
+        src: chaban,
+      },
+    ],
+    lien: "https://fermeturepontchaban.website/",
+    techno: [
+      {
+        id: 1,
+        src: next,
+      },
+      {
+        id: 2,
+        src: query,
+      },
+      {
+        id: 3,
+        src: tailwind,
       },
     ],
   },

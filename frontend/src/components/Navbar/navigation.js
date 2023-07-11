@@ -14,11 +14,6 @@ const navigation = [
     title: "Mes projets",
     link: "project",
   },
-  {
-    id: 4,
-    title: "Contact",
-    link: "contact",
-  },
 ];
 
 export default navigation;
