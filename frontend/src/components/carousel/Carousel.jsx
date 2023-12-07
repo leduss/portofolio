@@ -8,6 +8,7 @@ import right from "./tools/assets/right.svg";
 export default function Carousel() {
   const [isActive, setIsActive] = useState(1);
   const [current, setCurrent] = useState(0);
+
   function next() {
     gsap.to("#car", {
       opacity: 0,
@@ -58,6 +59,7 @@ export default function Carousel() {
       );
     }, 100);
   };
+
   return (
     <div className="flex flex-col justify-center items-center w-screen h-screen">
       <div className="w-full h-3/6 mt-36 max-lg:mt-16 max-lg:h-4/6" id="car">

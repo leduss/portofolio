@@ -19,11 +19,16 @@ function CarouselItems({
     }
     return () => clearInterval(interval);
   }, [current, autoPlay, autoPlaySpeed]);
+  const test = () => {
+    setCurrent(current === el.img.length - 1 ? 0 : current + 1);
+  };
+
   return (
     <div className="flex flex-col gap-4 overflow-hidden relative">
       <div
         className="flex transition-transform ease-out duration-1000"
         style={{ transform: `translateX(-${current * 100}%)` }}
+        onTouchMove={test}
       >
         {el.img.map((element) => (
           <img src={element.src} alt="" className="rounded-xl" />
